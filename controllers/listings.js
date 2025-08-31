@@ -8,7 +8,7 @@ const { category } = req.query;
     filter.category = category;
   }
 const allListings = await Listing.find(filter);
-  res.render("listings/index.ejs", { allListings , selectedCategory: category || null });
+  res.render("listings/index.ejs", { categories,allListings , selectedCategory: category || null });
 };
 
 //New Route
